@@ -4,9 +4,9 @@
             <div class="header_container">
                 <div class="header_container_leftlogohum">
                     <div class="hammenuv">
-                        <button @click="openHide" class="btn hammenuv_btn">
-                            <img v-if="!openMenu" src="img/menu.png" alt="">
-                            <img v-else src="img/close.png" alt="">
+                        <button @click="showHide()" class="btn hammenuv_btn">
+                            <img v-if="openMenu" src="img/close.png" alt="">
+                            <img v-else src="img/menu.png" alt="">
                         </button>
                     </div>
                     <a class="header_logo" href="#">
@@ -52,29 +52,27 @@
     export default {
         name: 'Header',
         data: () =>({
-            openMenu: false,
-            winWidth: null,
+            openMenu: true,
+            
         }),
         methods:{
-            openHide(){
-                this.winWidth = window.innerWidth;
-                console.log( this.winWidth);
+            showHide(){
                 this.openMenu = !this.openMenu;
+            },
+            windowWidht(){
+                if(window.innerWidth <= 991)
+                this.openMenu = false;
+                console.log(window.innerWidth);
             }
         },
         mounted() {
-            // window.addEventListener('resize', () => {
-            //     this.windowWidth = window.innerWidth
-            //     console.log(this.isMobile)
-            // })
+           this.windowWidht();
         },
         computed: {
-            // isMobile() {
-            //     return this.windowWidth >= 991
-            // }
+   
         },
         watch: {
-
+       
         }
     };
 </script>
