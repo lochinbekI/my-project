@@ -15,7 +15,7 @@
                                         <span class="veevalid_mas">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                     <ValidationProvider rules="required" v-slot="{ errors }">
-                                        <input class="mb_0px" v-model="value" placeholder="Телефон" type="text" v-mask="'+999(99)-99-99-99'" />
+                                        <input class="mb_0px" v-model="value" placeholder="Телефон" type="text" v-mask="'+999(99)-99-99-99'"/>
                                         <span class="veevalid_mas">{{ errors[0] }}</span>
                                     </ValidationProvider>
                                     <div class="top_footer_select">
@@ -96,10 +96,6 @@
             <div class="gradient_all gradient_all_height_6px"></div>
         </footer>
 
-
-
-
-
     </div>
 </template>
 
@@ -122,21 +118,12 @@
         data: () => ({
             value: '',
             value2: '',
-
-
-            firstName: '',
-            lastName: '',
-            email: ''
         }),
         methods: {
             onSubmit()
             {
                 alert('Form has been submitted!');
             },
-            sendAccounts()
-            {
-
-            }
         }
 
     };

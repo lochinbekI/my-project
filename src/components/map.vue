@@ -75,7 +75,7 @@
         data: () =>({
             markers: [
                 {
-                    position: {lat: 41.311081, lng: 69.240562}
+                    position: {lat: 41.311081, lng: 69.200062}
                 },
                 // {
                 //     position: {lat: 11.0, lng: 11.0}
