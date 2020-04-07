@@ -4,6 +4,7 @@
             <div class="container">
                 <div class="top_footer">
                     <div class="tofoter">
+<!--                        mana-->
                         <ValidationObserver v-slot="{ handleSubmit }">
                             <form @submit.prevent="handleSubmit(onSubmit)">
                                 <div class="tofoter_form">
